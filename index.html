@@ -4,47 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Туристична агенція "Світ Подорожей"</h1>
-        <nav>
-            <a href="#about">Про агенцію</a> |
-            <a href="#tours">Популярні напрямки</a> |
-            <a href="#contacts">Контакти</a>
+    <header class="header">
+        <h1>туристична агенція "світ подорожей"</h1>
+        <nav class="nav">
+            <a href="#about">про агенцію</a> |
+            <a href="#tours">популярні напрямки</a> |
+            <a href="#booking">бронювання</a> |
+            <a href="#contacts">контакти</a>
         </nav>
     </header>
 
     <main>
-        <section id="about">
-            <h2>Про нашу агенцію</h2>
-            <p>Ми допомагаємо відкривати світ та організовуємо незабутній відпочинок вже понад 10 років.</p>
-            <p>Наша команда дбає про кожен етап вашої подорожі: від вибору готелю до перельоту та екскурсій.</p>
+        <section id="about" class="section">
+            <h2>про нашу агенцію</h2>
+            <p>ми допомагаємо відкривати світ та організовуємо незабутній відпочинок вже понад 10 років</p>
+            <p>наша команда дбає про кожен етап вашої подорожі від вибору готелю до перельоту та екскурсій</p>
+            <button class="button" type="button">замовити консультацію</button>
         </section>
 
-        <section id="tours">
-            <h2>Популярні напрямки та тури</h2>
-            <p>Оберіть найкращий варіант для вашої наступної відпустки:</p>
-            <ul>
-                <li>Екскурсійні тури Європою</li>
-                <li>Пляжний відпочинок на Середземному морі</li>
-                <li>Гірськолижні курорти Альп</li>
-                <li>Екзотичні подорожі до Азії</li>
-            </ul>
-            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828" alt="Туристична подорож та карти" width="400">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Морський пляж з пальмами" width="400">
+        <section id="tours" class="section">
+            <h2>популярні напрямки та тури</h2>
+            <p>оберіть найкращий варіант для вашої наступної відпустки</p>
+            
+            <div class="cards-list">
+                <a href="#booking" class="card">
+                    <h3>екскурсійні тури європою</h3>
+                </a>
+                <a href="#booking" class="card">
+                    <h3>пляжний відпочинок на середземному морі</h3>
+                </a>
+                <a href="#booking" class="card">
+                    <h3>гірськолижні курорти альп та екзотичні подорожі до азії</h3>
+                </a>
+            </div>
+
+            <div class="images-container">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828" alt="туристична подорож та карти">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="морський пляж з пальмами">
+            </div>
         </section>
 
-        <section id="contacts">
-            <h2>Контакти</h2>
-            <p>Зв'яжіться з нами для консультації та бронювання:</p>
-            <p>Телефон: +380 44 123 45 67</p>
-            <p>Офіційний партнер: <a href="https://www.booking.com" target="_blank" rel="noopener">Booking.com</a></p>
+        <section id="booking" class="section">
+            <h2>бронювання туру</h2>
+            <p>заповніть форму для підбору та реєстрації вашої подорожі</p>
+            
+            <form action="#" method="post" class="booking-form">
+                <div class="form-group">
+                    <label for="user-name">ім'я та прізвище:</label>
+                    <input type="text" id="user-name" name="user_name" required minlength="2" placeholder="введіть ваше ім'я">
+                </div>
+
+                <div class="form-group">
+                    <label for="tour-type">напрямок подорожі:</label>
+                    <select id="tour-type" name="tour_type" required>
+                        <option value="">оберіть тур</option>
+                        <option value="europe">екскурсійний тур європою</option>
+                        <option value="sea">пляжний відпочинок</option>
+                        <option value="mountains">гірськолижний курорт</option>
+                        <option value="asia">екзотична азія</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="travel-date">дата вильоту:</label>
+                    <input type="date" id="travel-date" name="travel_date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-message">ваші побажання:</label>
+                    <textarea id="user-message" name="user_message" rows="4" placeholder="введіть додаткові побажання"></textarea>
+                </div>
+
+                <button type="submit" class="button form-button">відправити заявку</button>
+            </form>
+        </section>
+
+        <section id="contacts" class="section">
+            <h2>контакти</h2>
+            <p>зв'яжіться з нами для консультації та бронювання</p>
+            <p>телефон 0 44 123 45 67</p>
+            <p>офіційний партнер <a href="https://www.booking.com" target="_blank" rel="noopener">booking.com</a></p>
         </section>
     </main>
 
-    <footer>
-        <p>© 2026 Туристична агенція "Світ Подорожей". Усі права захищено.</p>
+    <footer class="footer">
+        <p>2026 туристична агенція "світ подорожей" усі права захищено</p>
     </footer>
 </body>
 </html>
