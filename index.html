@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>туристична агенція "світ подорожей"</h1>
-        <nav>
+        <nav class="nav">
             <a href="#about">про агенцію</a> |
             <a href="#tours">популярні напрямки</a> |
             <a href="#contacts">контакти</a>
@@ -16,35 +17,43 @@
     </header>
 
     <main>
-        <section id="about">
+        <section id="about" class="section">
             <h2>про нашу агенцію</h2>
             <p>ми допомагаємо відкривати світ та організовуємо незабутній відпочинок вже понад 10 років</p>
             <p>наша команда дбає про кожен етап вашої подорожі від вибору готелю до перельоту та екскурсій</p>
+            <button class="button" type="button">замовити консультацію</button>
         </section>
 
-        <section id="tours">
+        <section id="tours" class="section">
             <h2>популярні напрямки та тури</h2>
             <p>оберіть найкращий варіант для вашої наступної відпустки</p>
-            <ul>
-                <li>екскурсійні тури європою</li>
-                <li>пляжний відпочинок на середземному морі</li>
-                <li>гірськолижні курорти альп</li>
-                <li>екзотичні подорожі до азії</li>
-            </ul>
-            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828" alt="туристична подорож та карти" width="400">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="морський пляж з пальмами" width="400">
+            
+            <div class="cards-list">
+                <a href="#contacts" class="card">
+                    <h3>екскурсійні тури європою</h3>
+                </a>
+                <a href="#contacts" class="card">
+                    <h3>пляжний відпочинок на середземному морі</h3>
+                </a>
+                <a href="#contacts" class="card">
+                    <h3>гірськолижні курорти альп та екзотичні подорожі до азії</h3>
+                </a>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828" alt="туристична подорож та карти">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="морський пляж з пальмами">
         </section>
 
-        <section id="contacts">
+        <section id="contacts" class="section">
             <h2>контакти</h2>
-            <p>звяжіться з нами для консультації та бронювання</p>
+            <p>зв'яжіться з нами для консультації та бронювання</p>
             <p>телефон 0 44 123 45 67</p>
             <p>офіційний партнер <a href="https://www.booking.com" target="_blank" rel="noopener">booking.com</a></p>
         </section>
     </main>
 
-    <footer>
-        <p> 2026 туристична агенція "світ подорожей" усі права захищено</p>
+    <footer class="footer">
+        <p>2026 туристична агенція "світ подорожей" усі права захищено</p>
     </footer>
 </body>
-</html>         
+</html>
