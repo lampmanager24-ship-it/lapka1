@@ -1,0 +1,145 @@
+:root {
+  --color-primary: #1e40af;
+  --color-text: #1f2937;
+  --color-background: #f3f4f6;
+  --color-surface: #ffffff;
+  --color-error: #dc2626;
+  --radius: 8px;
+  --gap: 15px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+h1, h2 {
+  color: var(--color-primary);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap);
+  margin-bottom: 20px;
+}
+
+.card {
+  display: block;
+  background-color: var(--color-surface);
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  padding: 15px;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+.images-container {
+  display: flex;
+  gap: var(--gap);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.images-container img {
+  max-width: 48%;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--color-surface);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+nav a:hover, button:hover, .card:hover {
+  opacity: 0.85;
+}
+
+nav a:focus-visible, 
+button:focus-visible, 
+.card:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+input:invalid:not(:placeholder-shown),
+select:invalid:not(:focus) {
+  border-color: var(--color-error);
+  background-color: #fef2f2;
+}
+
+button {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.form-button {
+  width: 100%;
+}
