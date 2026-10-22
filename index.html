@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <script src="js/main.js" defer></script>
+    <!-- <script src="js/main.js" defer></script> -->
+    <script src="js/scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -36,6 +37,19 @@
             <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828" alt="туристична подорож та карти" width="400">
             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="морський пляж з пальмами" width="400">
         </section>
+
+        <div class="filter-controls">
+  <input type="text" id="search-input" placeholder="Пошук за назвою або описом...">
+  <div class="category-buttons">
+    <button type="button" class="filter-btn is-active" data-category="all">Усі</button>
+    <button type="button" class="filter-btn" data-category="міста">Міста</button>
+    <button type="button" class="filter-btn" data-category="гори">Гори</button>
+    <button type="button" class="filter-btn" data-category="море">Море</button>
+  </div>
+</div>
+
+<div id="tours-container" class="tours-grid"></div>
+<div id="no-results-msg" class="no-results is-hidden">Нічого не знайдено за вашим запитом.</div>
 
         <section id="contacts">
             <h2>контакти</h2>
