@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <script src="js/main.js" defer></script>
+    <script type="module" src="js/main.js"></script>
 </head>
 <body>
     <header>
@@ -25,24 +25,26 @@
         </section>
 
         <section id="tours">
-            <h2>популярні напрямки та тури</h2>
-            <p>оберіть найкращий варіант для вашої наступної відпустки</p>
-            <ul>
-                <li>екскурсійні тури європою</li>
-                <li>пляжний відпочинок на середземному морі</li>
-                <li>гірськолижні курорти альп</li>
-                <li>екзотичні подорожі до азії</li>
-            </ul>
-            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828" alt="туристична подорож та карти" width="400">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="морський пляж з пальмами" width="400">
-        </section>
+  <h2>популярні напрямки та тури</h2>
+  <p>оберіть найкращий варіант для вашої наступної відпустки</p>
 
-        <section id="contacts">
-            <h2>контакти</h2>
-            <p>звяжіться з нами для консультації та бронювання</p>
-            <p>телефон 0 44 123 45 67</p>
-            <p>офіційний партнер <a href="https://www.booking.com" target="_blank" rel="noopener">booking.com</a></p>
-        </section>
+  <!-- Елементи для пошуку та фільтрації -->
+  <div class="filter-controls">
+    <input type="text" id="search-input" placeholder="Пошук за назвою або описом...">
+    <div class="category-buttons">
+      <button type="button" class="filter-btn is-active" data-category="all">Усі</button>
+      <button type="button" class="filter-btn" data-category="міста">Міста</button>
+      <button type="button" class="filter-btn" data-category="гори">Гори</button>
+      <button type="button" class="filter-btn" data-category="море">Море</button>
+    </div>
+  </div>
+
+  <!-- Контейнер, куди JS динамічно закине картки -->
+  <div id="tours-container" class="tours-grid"></div>
+
+  <!-- Повідомлення про відсутність результатів -->
+  <div id="no-results-msg" class="no-results is-hidden">Нічого не знайдено за вашим запитом.</div>
+</section>
     </main>
 
     <footer>
