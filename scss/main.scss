@@ -1,0 +1,201 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+  color: $color-text;
+  background-color: $color-background;
+  text-align: center;
+  overflow-x: hidden;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 20px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    max-width: 800px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: $radius;
+}
+
+h1, h2 {
+  color: $color-primary;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.nav {
+  @include flex-center(column, 10px);
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    gap: $gap;
+  }
+
+  a {
+    color: $color-primary;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap;
+  margin-bottom: 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  display: block;
+  background-color: $color-surface;
+  border: 1px solid #ccc;
+  border-radius: $radius;
+  padding: 15px;
+  text-decoration: none;
+  color: $color-text;
+
+  h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: $color-primary;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+.images-container {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  img {
+    width: 100%;
+
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 48%;
+    }
+  }
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: $color-surface;
+  padding: 15px;
+  border-radius: $radius;
+  border: 1px solid #ccc;
+  text-align: left;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 20px;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: $radius;
+  font: inherit;
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+input:invalid:not(:placeholder-shown),
+select:invalid:not(:focus) {
+  border-color: $color-error;
+  background-color: #fef2f2;
+}
+
+button {
+  background-color: $color-primary;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: $radius;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+.form-button {
+  width: 100%;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #666;
+}

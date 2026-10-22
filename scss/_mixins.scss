@@ -1,0 +1,9 @@
+@use 'variables' as *;
+
+@mixin flex-center($direction: row, $g: $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $g;
+}
